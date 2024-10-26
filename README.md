@@ -17,3 +17,4 @@ This project is a personal portfolio inspired by a desktop. I aimed to create so
 1. Clone the repository:
    ```bash
    git clone https://github.com/claudx6/desktop-portfolio.git
+
