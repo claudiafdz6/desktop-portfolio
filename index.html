@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio - Escritorio</title>
     <link rel="stylesheet" href="styles/style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
@@ -14,9 +13,55 @@
     <nav class="menu">
         <ul>
             <li class="heart-icon"></li>
-            <li class="day-time">saturday</li>
+            <li class="day-time"></li>
         </ul>
     </nav>
+
+    <!-- main -->
+
+    <div class="desktop">
+        <div class="desktop-content">
+            <div class="folder" id="github" onclick="openGitHub()">
+                <div class="overlay"></div>
+                <img src="images/github.svg" alt="GitHub icon"/>
+                <p>GitHub</p>
+            </div>
+            <div class="folder" id="email" onclick="openEmail()">
+                <div class="overlay"></div>
+                <img src="images/mail-heart.svg" alt="Mail icon"/>
+                <p>Email</p>
+            </div>
+        </div>
+
+        <div class="desktop-content">
+            <div class="folder" id="experience" onclick="openExperiencePopup()">
+                <div class="overlay"></div>
+                <img src="images/experience.svg" alt="Experience"/>
+                <p>Experience</p>
+            </div>
+            <div class="folder" id="resume" onclick="openResumePopup()">
+                <div class="overlay"></div>
+                <img src="images/cv.svg" alt="CV"/>
+                <p>CV</p>
+            </div>
+        </div>
+
+        <div class="desktop-content">
+            <div class="folder" id="education" onclick="openEducationPopup()">
+                <div class="overlay"></div>
+                <img src="images/education.svg" alt="Education"/>
+                <p>Education</p>
+            </div>
+        </div>
+
+        <div class="desktop-content">
+            <div class="folder" id="projects" onclick="openProjectsPopup()">
+                <div class="overlay"></div>
+                <img src="images/projects.svg" alt="Projects"/>
+                <p>Projects</p>
+            </div>
+        </div>
+    </div>
 
     <script src="scripts/main.js"></script>
 </body>
