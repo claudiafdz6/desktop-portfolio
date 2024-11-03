@@ -7,9 +7,12 @@ body {
     font-weight: 300;
 }
 
+/* menu styles */
+
 .menu {
     background-color: rgba(128, 128, 128, 0.451);
     position: fixed;
+    top: 0;
     width: 100%;
     height: 30px;
     display: flex;
@@ -46,4 +49,46 @@ li {
     color: #f3166e;
     content: "❤";
     font-size: 18px;
+}
+
+/* main styles */
+
+.wrapper {
+    width: 100px; 
+    margin-left: 0;
+    margin-top: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto;
+    gap: 0;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: black;
+    /* background-color: #ddd; */
+    /* border: 1px solid #ccc; */
+}
+
+.grid-item img {
+    width: 50px;
+    height: 50px; 
+    margin-bottom: 5px; 
+}
+
+
+.grid-container-second {
+    padding: 20px;
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    margin-top: -20px;
 }
