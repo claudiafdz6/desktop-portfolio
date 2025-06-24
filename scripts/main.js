@@ -24,3 +24,29 @@ setInterval(updateDateTime, 1000); // to keep the time updated in real-time ever
 updateDateTime();
 
 
+// modals
+
+// Abre un modal específico
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+// Cierra un modal específico
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+// Cierra el modal al hacer clic fuera del contenido
+window.onclick = function(event) {
+    const modals = document.getElementsByClassName("modal");
+    for (let i = 0; i < modals.length; i++) {
+        if (event.target == modals[i]) {
+            modals[i].style.display = "none";
+        }
+    }
+}
+
+
+function shutDown() {
+    window.location.href = 'shutdown.html';
+}

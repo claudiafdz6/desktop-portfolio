@@ -34,7 +34,7 @@
             </div>
 
 
-            <div class="grid-item" id="experience" onclick="openExperiencePopup()">
+            <div class="grid-item" id="experience" onclick="openModal('experienceModal')">
                 <div class="overlay"></div>
                 <img src="images/experience.svg" alt="Experience" />
                 <p>Experience</p>
@@ -50,13 +50,13 @@
         </div>
 
         <div class="grid-container-second">
-            <div class="grid-item" id="education" onclick="openEducationPopup()">
+            <div class="grid-item" id="education" onclick="openModal('educationModal')">
                 <div class="overlay"></div>
                 <img src="images/education.svg" alt="Education" />
                 <p>Education</p>
             </div>
 
-            <div class="grid-item" id="projects" onclick="openProjectsPopup()">
+            <div class="grid-item" id="projects" onclick="openModal('projectModal')">
                 <div class="overlay"></div>
                 <img src="images/projects.svg" alt="Projects" />
                 <p>Projects</p>
@@ -64,7 +64,121 @@
         </div>
     </div>
 
+    <!-- modals -->
+
+    <!-- <div class="modal" id="experienceModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('experienceModal')">&times;</span>
+            <h2>Experience</h2>
+            <p>Contenido de la experiencia</p>
+        </div>
+    </div> -->
+
+    <div class="modal" id="experienceModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('experienceModal')">&times;</span>
+            <h2 class="cloud-border">Experience</h2>
+
+            <h3>Lara Croft</h3>
+            <strong>Senior Web Developer & World Explorer</strong><br/>
+            <em>Tomb Raider Technologies — 2018 - Present</em>
+            <ul>
+                <li>Led development of responsive, cross-platform websites using HTML5, CSS3, and JavaScript frameworks (React, Vue, Angular).</li>
+                <li>Implemented RESTful APIs and integrated third-party services to improve user experience.</li>
+                <li>Coordinated a team of 5 developers on agile projects, increasing delivery speed by 30%.</li>
+                <li>Optimized website performance, reducing load times by 40% across major browsers.</li>
+                <li>Utilized advanced problem-solving skills honed from years of global exploration to overcome technical challenges.</li>
+            </ul>
+
+            <h3>World Explorer & Archaeologist</h3>
+            <em>Independent Expeditions — 2005 - 2018</em>
+            <ul>
+                <li>Traveled extensively to over 50 countries uncovering lost artifacts, ancient ruins, and historical secrets.</li>
+                <li>Conducted field research and documentation for various archaeological sites in challenging environments.</li>
+                <li>Applied advanced navigation, survival skills, and strategic planning in diverse and remote locations worldwide.</li>
+                <li>Collaborated with international research teams to preserve and digitize historical findings.</li>
+                <li>Managed expedition logistics and implemented modern technology tools for data collection and mapping.</li>
+            </ul>
+
+            <h3>Junior Front-End Developer</h3>
+            <em>Adventure Web Studios — 2015 - 2018</em>
+            <ul>
+                <li>Developed UI components with React and Angular for client projects.</li>
+                <li>Collaborated with designers to convert wireframes into interactive web pages.</li>
+                <li>Performed code reviews and contributed to documentation.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="educationModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('educationModal')">&times;</span>
+            <h2>Education</h2>
+            
+            <h3>Bachelor of Science in Computer Science</h3>
+            <em>University of London — 2011 - 2015</em>
+            <ul>
+                <li>Specialized in software engineering and web technologies.</li>
+                <li>Graduated with Honors (Top 10% of the class).</li>
+            </ul>
+
+            <h3>Professional Courses:</h3>
+            <ul>
+                <li>Full Stack Web Development Bootcamp — 2016</li>
+                <li>Mobile App Development with React Native — 2019</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('projectModal')">&times;</span>
+            <h2 class="project-name">Projects</h2>
+            
+            <h3>Tomb Tracker</h3>
+            <em>Web Application</em>
+            <ul>
+                <li>Developed a React-based app to track and manage archaeological expeditions.</li>
+                <li>Implemented Google Maps API integration and real-time data updates.</li>
+                <li>Backend built with Node.js and Express; MongoDB database.</li>
+
+            </ul>
+
+            <h3>Lara’s Portfolio</h3>
+            <em>Personal Website</em>
+            <ul>
+                <li>Created a responsive portfolio site showcasing projects and skills using Vue.js.</li>
+                <li>Implemented smooth animations and a dark mode toggle.</li>
+            </ul>
+
+            <h3>Adventure Guide Mobile App</h3>
+            <em>Mobile Application</em>
+            <ul>
+                <li>Developed a cross-platform app with React Native to provide interactive guides for explorers.</li>
+                <li>Integrated offline map support and push notifications.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="modal" id="footerModal">
+        <div class="footer-modal">
+            <span class="close" onclick="closeModal('footerModal')">&times;</span>
+            <h2>👋👋👋</h2>
+            <p>It was a pleasure having you here. Come back anytime!</p>
+            <button onclick="shutDown()" class="shutdown-btn">Shut down</button>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <img src="images/cloud.svg" alt="Cloud icon" onclick="openModal('footerModal')" style="cursor: pointer;">
+    </footer>
+
     <script src="scripts/main.js"></script>
+
 </body>
 
 </html>

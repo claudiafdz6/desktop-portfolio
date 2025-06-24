@@ -1,10 +1,15 @@
+html, body {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('https://static.tumblr.com/94eb957a00fd03c0c2f7d26decd71578/u1rhacw/osAmyyh1q/tumblr_static_tumblr_static_gaussian_blur_gradient_desktop_1680x943_wallpaper-393751.jpg');
+    background: linear-gradient(to bottom right, rgb(161, 32, 247), pink);
     color: #fff;
     font-weight: 300;
+    font-family: cursive;
 }
 
 /* menu styles */
@@ -54,14 +59,14 @@ li {
 /* main styles */
 
 .wrapper {
-    width: 100px; 
+    width: 100px;
     margin-left: 0;
     margin-top: 50px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 0;
 }
@@ -73,22 +78,169 @@ li {
     justify-content: center;
     padding: 20px;
     color: black;
+    border: 2px solid transparent;
     /* background-color: #ddd; */
     /* border: 1px solid #ccc; */
 }
 
 .grid-item img {
     width: 50px;
-    height: 50px; 
-    margin-bottom: 5px; 
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+#resume {
+    width: 90px;
+    height: 110px;
+}
+
+
+.wrapper .grid-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 
 .grid-container-second {
+    padding: 0;
+    width: 120px;
+    height: 100px;
+    margin-bottom: 5px;
+    margin-top: -20px;
+}
+
+/* modal styles */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
     padding: 20px;
-    margin-left: 15px;
+    border-radius: 8px;
+    width: 800px;
+    max-width: 80%;
+    max-height: 70vh;   /* Limita la altura máxima */
+    overflow-y: auto;   /* Activa scroll vertical si hace falta */
+    position: relative;
+    color: black;
+    box-sizing: border-box; /* para incluir padding dentro del ancho/alto */
+}
+
+.cloud-border {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 28px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #4b2e05; /* marrón oscuro */
+  background: #d7b89e; /* marrón claro tipo cuero */
+  border-radius: 50px;
+  box-shadow:
+    -15px 0 0 #d7b89e,
+    15px 0 0 #d7b89e,
+    0 15px 0 #d7b89e,
+    0 -15px 0 #d7b89e;
+  position: relative;
+}
+
+
+.footer-modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 800px;
+    max-width: 80%;
+    position: relative;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #e74c3c; /* rojo */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px; /* para centrar verticalmente la X */
+    text-align: center; /* centrar horizontalmente */
+    border-radius: 50%; /* hace que sea un círculo */
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 6px rgba(231, 76, 60, 0.8);
+    transition: background-color 0.3s ease;
+}
+
+.close:hover {
+    background-color: #c0392b; /* rojo más oscuro al pasar el mouse */
+    box-shadow: 0 0 10px rgba(192, 57, 43, 1);
+}
+
+
+.project-name {
+    padding: 10px;
+    border-radius: 5px;
+    background: #333;
+    color: #f1f1f1;
+    font-size: 12px;
+    width: 65px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+
+/* footer styles */
+
+.footer {
+    background-color: rgba(128, 128, 128, 0.451);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.footer img {
     width: 50px;
     height: 50px;
     margin-bottom: 5px;
-    margin-top: -20px;
+}
+
+.shutdown-btn {
+    background-color: #ff69b4;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 0 rgba(255, 105, 180, 0);
+}
+
+.shutdown-btn:hover {
+    box-shadow: 0 0 8px 3px rgba(255, 105, 180, 0.8);
+    transform: scale(1.05);
 }
